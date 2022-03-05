@@ -4,9 +4,15 @@ namespace App1
 {
     class Program
     {
-        static void Main(string[] args)
+        public static void Main()
         {
-            Console.WriteLine("Hello World!");
+            Fraction a = new Fraction(2, 6);
+            Fraction b = new Fraction();
+            Fraction c = new Fraction(a);
+
+            Fraction d = a + b;
+
+            Console.WriteLine($"{d}");
         }
     }
 }
