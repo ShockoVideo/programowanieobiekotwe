@@ -5,17 +5,23 @@ namespace Lab2
 
 	public class Person
 	{
-		protected string name { get; set; }
-		protected int	age { get; set; }
+		private string name;
+		private int age;
 		
-		public Perosn(string name, int age)
+		protected string Name { get=> name; set =>name; }
+		protected int	Age { get=> age; set=> age = value; }
+		
+		public Person(string name, int age)
 		{
 			this.name = name;
 			this.age = age;
 
-
-
 		}
-	}
+
+        public override string ToString()
+        {
+            return "Name = " + Name + ",Age = " Age;
+        }
+    }
 
 }
