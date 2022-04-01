@@ -23,9 +23,9 @@ namespace lab_2_zadanie
         public string Name { get => name; set => name = value; }
         public int Age { get => age; set => age = value; }
 
-        public void Print(string prefix)
+        public virtual void Print()
         {
-            Console.WriteLine(prefix);
+            Console.WriteLine($"{Name} ({Age}y.o.)");
         }
 
     }

@@ -26,16 +26,19 @@ namespace lab_2_zadanie
 
         public void Print()
         {
+            Console.ForegroundColor = ConsoleColor.Cyan;
             Console.WriteLine("Shop: " + Name);
+            Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine("-- People: --");
-            foreach(Person person in people)
+            foreach (Person person in people)
             {
-                  Console.WriteLine("Seller: " + person.Name + "(" + person.Age + "y.o.)");
-                  Console.WriteLine("Buyer: " + person.Name + "(" + person.Age + "y.o.)");
-                  if (products.Length != 0)
-                  {
-                      Console.WriteLine("-- Products: --");
-                  }   
+                person.Print();
+            }
+
+            Console.WriteLine("-- Products: --");
+            foreach (Product product in products)
+            {
+                product.Print();
             }
         }
 

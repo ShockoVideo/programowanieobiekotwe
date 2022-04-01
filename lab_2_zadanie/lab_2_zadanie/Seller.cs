@@ -7,15 +7,18 @@ namespace lab_2_zadanie
     public class Seller : Person
     {
 
-        public Seller(string name, int age)
+        public Seller(string name, int age) 
         {
             Name = name;
             Age = age;
         }
 
-        public new void Print (string prefix)
+        public override void Print ()
         {
-            Console.WriteLine(prefix);
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.Write("        Seller: ");
+            Console.ForegroundColor = ConsoleColor.White;
+            base.Print();
         }
     }
 

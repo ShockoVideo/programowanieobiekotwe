@@ -11,15 +11,16 @@ namespace lab_2_zadanie
 
         public int Count { get => count; set => count = value; }
 
-        public Fruit (string name, int count)
+        public Fruit(string name, int count) : base(name)
         {
             Name = name;
             Count = count;
         }
 
-        public void Print(string prefix)
+        public override void Print()
         {
-            Console.WriteLine(prefix);
+            base.Print();
+            Console.WriteLine($"({Count} fruits)");
         }
     }
 }

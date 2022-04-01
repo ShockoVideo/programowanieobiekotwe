@@ -8,7 +8,7 @@ namespace lab_2_zadanie
     {
         private double weight;
 
-        public Meat(string name, double weight)
+        public Meat(string name, double weight): base(name)
         {
             Name = name;
             Weight = weight;
@@ -17,9 +17,10 @@ namespace lab_2_zadanie
 
         public double  Weight { get => weight; set => weight = value; }
 
-        public void Print(string prefix)
+        public override void Print()
         {
-            Console.WriteLine(prefix);
+            base.Print();
+            Console.WriteLine($"({ Weight} kg)");
         }
     }
 }

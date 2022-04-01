@@ -15,14 +15,16 @@ namespace lab_2_zadanie
 
         public Product(string name)
         {
-            Name = name;
+            this.name = name;
         }
 
         public string Name { get => name; set => name = value; }
 
-        public void Print(string prefix)
+        public virtual void Print()
         {
-            Console.WriteLine(prefix);
+            Console.ForegroundColor = ConsoleColor.Magenta;
+            Console.Write($"        {Name} ");
+            Console.ForegroundColor = ConsoleColor.White;
         }
     }
 }
